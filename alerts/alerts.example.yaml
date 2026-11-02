@@ -1,0 +1,21 @@
+# Alert thresholds
+thresholds:
+  cpu_percent: 85
+  memory_percent: 90
+  disk_percent: 90
+
+  # Agent is considered offline after this many seconds
+  agent_timeout_seconds: 120
+
+# Avoid duplicate alerts
+cooldown_seconds: 300
+
+# Telegram notifications
+telegram:
+  enabled: false
+
+  # Prefer environment variables for real credentials:
+  # TELEGRAM_BOT_TOKEN
+  # TELEGRAM_CHAT_ID
+  bot_token: ""
+  chat_id: ""

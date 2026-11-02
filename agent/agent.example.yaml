@@ -1,0 +1,27 @@
+# Agent identity
+agent_name: ubuntu-web-01
+
+# Central management server
+server_url: "https://monitor.example.internal:8000"
+
+# Use environment variable SYSADMIN_AGENT_TOKEN
+# for the real secret instead of committing it here.
+agent_token: ""
+
+# Collection interval in seconds
+interval: 30
+
+# Central API endpoint
+metrics_path: "/api/agent/metrics"
+
+# Verify HTTPS certificates
+verify_tls: true
+
+# systemd services to monitor
+services:
+  - ssh
+  - nginx
+  - docker
+
+# Log directory
+log_dir: "logs"
